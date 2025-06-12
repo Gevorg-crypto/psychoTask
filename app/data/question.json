@@ -1,0 +1,208 @@
+{
+    "sections": [
+      {
+        "id": "basic_info",
+        "title": "Общая информация о ребенке",
+        "questions": [
+          {
+            "id": "child_name",
+            "type": "text",
+            "question": "Имя ребенка",
+            "required": true
+          },
+          {
+            "id": "birth_date",
+            "type": "date",
+            "question": "Дата рождения ребенка",
+            "required": true
+          },
+          {
+            "id": "gender",
+            "type": "radio",
+            "question": "Пол ребенка",
+            "options": ["Мужской", "Женский"],
+            "required": true
+          },
+          {
+            "id": "guardian_name",
+            "type": "text",
+            "question": "Имя родителя, законного представителя",
+            "required": true
+          }
+        ]
+      },
+      {
+        "id": "emotional_sphere",
+        "title": "Раздел 1. Эмоциональная сфера",
+        "questions": [
+          {
+            "id": "joy_frequency",
+            "type": "scale",
+            "question": "Ребенок часто выражает радость и удовольствие:",
+            "scale": 5,
+            "required": true
+          },
+          {
+            "id": "sadness_frequency",
+            "type": "scale",
+            "question": "Ребенок часто выражает грусть и недовольство:",
+            "scale": 5,
+            "required": true
+          },
+          {
+            "id": "anger_without_reason",
+            "type": "scale",
+            "question": "Ребенок часто грустит или злится без видимой причины:",
+            "scale": 5,
+            "required": true
+          },
+          {
+            "id": "emotional_outbursts",
+            "type": "scale",
+            "question": "Ребенок часто грустит или злится без видимой причины:",
+            "scale": 5,
+            "required": true
+          }
+        ]
+      },
+      {
+        "id": "social_interaction",
+        "title": "Раздел 2. Социальное взаимодействие",
+        "questions": [
+          {
+            "id": "makes_friends_easily",
+            "type": "scale",
+            "question": "Ребенок легко заводит друзей:",
+            "scale": 5,
+            "required": true
+          },
+          {
+            "id": "maintains_friendships",
+            "type": "scale",
+            "question": "Ребенок легко заводит друзей:",
+            "scale": 5,
+            "required": true
+          },
+          {
+            "id": "prefers_playing_with_children",
+            "type": "scale",
+            "question": "Ребенок предпочитает играть один, а не с другими детьми:",
+            "scale": 5,
+            "required": true
+          },
+          {
+            "id": "avoids_playing_with_children",
+            "type": "scale",
+            "question": "Ребенок предпочитает играть один, а не с другими детьми:",
+            "scale": 5,
+            "required": true
+          }
+        ]
+      },
+      {
+        "id": "self_regulation",
+        "title": "Раздел 3. Саморегуляция и поведение",
+        "questions": [
+          {
+            "id": "follows_rules",
+            "type": "scale",
+            "question": "Ребенок умеет соблюдать правила и инструкции:",
+            "scale": 5,
+            "required": true
+          },
+          {
+            "id": "breaks_rules",
+            "type": "scale",
+            "question": "Ребенок умеет соблюдать правила и инструкции:",
+            "scale": 5,
+            "required": true
+          },
+          {
+            "id": "controls_impulses",
+            "type": "scale",
+            "question": "Ребенок трудно контролировать свои импульсы:",
+            "scale": 5,
+            "required": true
+          },
+          {
+            "id": "impulse_control_difficulty",
+            "type": "scale",
+            "question": "Ребенку трудно контролировать свои импульсы:",
+            "scale": 5,
+            "required": true
+          }
+        ]
+      },
+      {
+        "id": "confidence",
+        "title": "Раздел 4. Самооценка и уверенность в себе",
+        "questions": [
+          {
+            "id": "confident_in_abilities",
+            "type": "scale",
+            "question": "Ребенок уверен в своих силах и способностях:",
+            "scale": 5,
+            "required": true
+          },
+          {
+            "id": "self_doubt",
+            "type": "scale",
+            "question": "Ребенок уверен в своих силах и способностях:",
+            "scale": 5,
+            "required": true
+          },
+          {
+            "id": "often_compares_self",
+            "type": "scale",
+            "question": "Ребенок часто сравнивает себя:",
+            "scale": 5,
+            "required": true
+          },
+          {
+            "id": "compares_negatively",
+            "type": "scale",
+            "question": "Ребенок часто сравнивает себя:",
+            "scale": 5,
+            "required": true
+          }
+        ]
+      },
+      {
+        "id": "general_questions",
+        "title": "Раздел 5. Общие вопросы",
+        "questions": [
+          {
+            "id": "emotional_state_assessment",
+            "type": "radio",
+            "question": "Как Вы оцениваете общее эмоциональное состояние Вашего ребенка?",
+            "options": ["Отличное", "Хорошее", "Удовлетворительное", "Неудовлетворительное", "Очень плохое"],
+            "required": true
+          },
+          {
+            "id": "development_concerns",
+            "type": "textarea",
+            "question": "Есть ли у Вашего ребенка какие-либо особенности развития или поведения, о которых Вы хотели бы сообщить дополнительно?",
+            "required": false
+          },
+          {
+            "id": "severe_concerns",
+            "type": "textarea",
+            "question": "Какие, на Ваш взгляд, главные стороны и таланты есть в Вашем ребенке?",
+            "required": false
+          },
+          {
+            "id": "child_strengths",
+            "type": "textarea",
+            "question": "Какие, на Ваш взгляд, области требуют особого внимания в развитии у Вашего ребенка?",
+            "required": false
+          },
+          {
+            "id": "specialist_consultation",
+            "type": "textarea",
+            "question": "Обращались ли Вы ранее к специалистам (психолог, невролог, логопед) по поводу развития или поведения Вашего ребенка?",
+            "required": false
+          }
+        ]
+      }
+    ]
+  }

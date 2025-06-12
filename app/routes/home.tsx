@@ -1,5 +1,8 @@
 import type { Route } from "./+types/home";
-import { Welcome } from "../welcome/welcome";
+import { store } from "@/store/store";
+import PsychologyTest from "@/components/PsychologyTest";
+import { Provider } from "react-redux";
+
 
 export function meta({}: Route.MetaArgs) {
   return [
@@ -9,5 +12,9 @@ export function meta({}: Route.MetaArgs) {
 }
 
 export default function Home() {
-  return <Welcome />;
+  return (
+    <Provider store={store}>
+      <PsychologyTest />
+    </Provider>
+  );
 }
