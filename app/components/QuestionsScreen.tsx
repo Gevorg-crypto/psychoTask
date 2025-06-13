@@ -47,8 +47,8 @@ const QuestionsScreen: React.FC<QuestionsScreenProps> = ({ onCompleted, taskId }
     setLocalAnswers(prev => ({ ...prev, [questionId]: value }));
   };
 
-  const handleDateChange = (date: Date | undefined) => {
-    setLocalAnswers(prev => ({ ...prev, birth_date: date?.toISOString() }));
+  const handleDateChange = (date: Date | null) => {
+    setLocalAnswers(prev => ({ ...prev, birth_date: date ? date.toISOString() : undefined }));
   };
 
   // Get all questions from all sections and filter required ones
@@ -184,16 +184,17 @@ const QuestionsScreen: React.FC<QuestionsScreenProps> = ({ onCompleted, taskId }
                   )}
                 </Button>
               </PopoverTrigger>
-              <PopoverContent className="w-auto p-0" align="start">
-                <Calendar
+              <PopoverContent className="w-auto p-0 relative" align="start">
+              <Calendar
                   mode="single"
                   locale={ru}
                   defaultMonth={new Date()}
                   selected={answers['birth_date'] ? new Date(answers['birth_date']) : undefined}
                   onSelect={handleDateChange}
-                  disabled={(date) =>
+                  disabled={(date:any) =>
                     date > new Date() || date < new Date('1900-01-01')
                   }
+                  className="transf"
                   initialFocus
                 />
               </PopoverContent>
@@ -219,7 +220,7 @@ const QuestionsScreen: React.FC<QuestionsScreenProps> = ({ onCompleted, taskId }
           </p>
         </CardHeader>
         
-        <CardContent className="space-y-8">
+        <CardContent className="space-y-8 text-black">
           {data && data.sections && Array.isArray(data.sections) && data.sections.map((section: any) => (
             <div key={section.id} className="space-y-4">
               <h3 className="text-xl font-semibold text-gray-800">{section.title}</h3>

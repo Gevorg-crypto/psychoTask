@@ -9,7 +9,7 @@ import ResultsScreen from './ResultsScreen';
 export type ScreenType = 'welcome' | 'upload' | 'questions' | 'results';
 
 const PsychologyTest = () => {
-  const [currentScreen, setCurrentScreen] = useState<ScreenType>('welcome');
+  const [currentScreen, setCurrentScreen] = useState<ScreenType>('results');
   const dispatch = useAppDispatch();
   const { taskId, uploadStatus, submitStatus } = useAppSelector((state) => state.test);
 
